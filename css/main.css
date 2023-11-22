@@ -1,0 +1,113 @@
+#app{
+    text-align: center;
+
+}
+
+body {
+
+    /* background-color: #5a5a5a; */
+    background:
+    radial-gradient(
+      110.35% 80.79% at 6% 103.92%,
+      rgba(37, 169, 239, 1) 0%,
+      rgba(37, 169, 239, 0) 100%
+    ),
+    linear-gradient(
+      169.3deg,
+      rgba(205, 249, 232, 1) 15%,
+      rgba(205, 249, 232, 0) 46%
+    ),
+    radial-gradient(
+      123% 73% at 107% 96%,
+      rgba(255, 253, 177, 1) 20%,
+      rgba(254, 228, 191, 1) 60%,
+      rgba(240, 189, 208, 1) 75%,
+      rgba(255, 129, 38, 0) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 204, 131, 1) 0%,
+      rgba(0, 204, 131, 1) 100%
+    );
+    font-family: "Nirmala UI";
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.addform{
+    height: 200px;
+    width: 300px;
+    font-size: 28px;
+
+}
+
+.tasks{
+    display: flex;
+    list-style-type: disc;
+    margin: 0px;
+    align-items: center;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+.error{
+    position: fixed;
+    top: 400px;
+    color: red;
+    width: 200px;
+
+}
+
+
+.cards{
+    list-style-type: none;
+    font-size: 14px;
+    width: 96%;
+    background-color: rgb(86, 91, 124);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+    padding-left: 0;
+}
+
+p{
+    margin: 5px;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+#cols {
+    display: flex;
+}
+
+.form_ {
+    margin-right: 30px;
+}
+
+.col {
+    width: 25%;
+    margin-right: 15px;
+    height: 800px;
+    text-align: c;
+    /* background-color: rgb(83, 255, 232); */
+    background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 0.4) 12%,
+    rgba(255, 255, 255, 0.1) 77%
+  );
+  background-blend-mode: ;
+  box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
