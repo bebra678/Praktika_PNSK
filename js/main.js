@@ -86,10 +86,10 @@ Vue.component('fill', {
                     <input required type="text" v-model="t3" placeholder="Заметка 3">
                 </li>
                 <li>
-                    <input type="text" v-model="t4" placeholder="Заметка 4">
+                    <input v-if="t1 != '' && t2 != '' && t3 != ''" type="text" v-model="t4" placeholder="Заметка 4">
                 </li>
                 <li >
-                    <input type="text" v-model="t5" placeholder="Заметка 5">
+                    <input v-if="t1 != '' && t2 != '' && t3 != '' && t4 != ''" type="text" v-model="t5" placeholder="Заметка 5">
                 </li>
                 <p>
                     <input type="submit" class="btn btn-primary" value="Добавить">
@@ -102,15 +102,40 @@ Vue.component('fill', {
     data() {
     return{
         title: null,
-        t1: null,
-        t2: null,
-        t3: null,
-        t4: null,
-        t5: null,
+        t1: '',
+        t2: '',
+        t3: '',
+        t4: '',
+        t5: '',
     }
 },
 methods:{
     onSubmit(){
+        // if(this.t4 != '' && this.t5 == '')
+        // {
+        //     let card = {
+        //         title: this.title,
+        //         tasks: [{text: this.t1, completed: false},
+        //             {text: this.t2, completed: false},
+        //             {text: this.t3, completed: false},
+        //             {text: this.t4, completed: false}],
+        //         date: new Date().toLocaleString(),
+        //         status: 0,
+        //     }
+        // }
+        // if(this.t4 != '' && this.t5 != '')
+        // {
+        //     let card = {
+        //         title: this.title,
+        //         tasks: [{text: this.t1, completed: false},
+        //             {text: this.t2, completed: false},
+        //             {text: this.t3, completed: false},
+        //             {text: this.t4, completed: false},
+        //             {text: this.t5, completed: false}],
+        //         date: new Date().toLocaleString(),
+        //         status: 0,
+        //     }
+        // }
         let card = {
             title: this.title,
             tasks: [{text: this.t1, completed: false},
@@ -123,11 +148,11 @@ methods:{
         }
         eventBus.$emit('card-submitted', card)
         this.title = null
-        this.t1 = null
-        this.t2 = null
-        this.t3 = null
-        this.t4 = null
-        this.t5 = null
+        this.t1 = ''
+        this.t2 = ''
+        this.t3 = ''
+        this.t4 = ''
+        this.t5 = ''
         this.date = null
 },
 }
